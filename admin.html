@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>内容后台 · 八哥手作</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="admin-body">
+
+<div class="admin-login" id="loginView">
+  <form class="login-card" id="loginForm">
+    <span class="seal">手作</span>
+    <h1>内容后台</h1>
+    <p class="login-sub">登录后可以修改网站的文字、作品、文章与图片</p>
+    <label class="login-field">
+      <span>密码</span>
+      <input type="password" id="loginPassword" autocomplete="current-password" placeholder="请输入后台密码">
+    </label>
+    <p class="login-error" id="loginError"></p>
+    <button class="btn btn-red login-btn" type="submit">登录</button>
+    <p class="login-hint">默认密码：bage1818 · 可在「品牌与页脚」中修改</p>
+  </form>
+</div>
+
+<div class="admin-app" id="appView" hidden>
+  <header class="admin-topbar">
+    <div class="admin-brand">
+      <span class="seal">手作</span>
+      <div>
+        <strong id="adminBrandName">八哥手作</strong>
+        <em>内容后台 · 本地编辑</em>
+      </div>
+    </div>
+
+    <div class="admin-actions">
+      <span class="admin-status" id="adminStatus">未连接网站文件夹</span>
+      <button class="adm-btn" type="button" id="connectBtn">连接网站文件夹</button>
+      <button class="adm-btn" type="button" id="downloadBtn">下载数据</button>
+      <button class="adm-btn adm-btn-primary" type="button" id="saveBtn">保存修改</button>
+      <button class="adm-btn adm-btn-ghost" type="button" id="logoutBtn">退出</button>
+    </div>
+  </header>
+
+  <div class="admin-layout">
+    <nav class="admin-tabs" id="adminTabs">
+      <button type="button" data-tab="hero" class="is-active">主视觉</button>
+      <button type="button" data-tab="about">关于我</button>
+      <button type="button" data-tab="works">作品</button>
+      <button type="button" data-tab="articles">文章</button>
+      <button type="button" data-tab="contact">联系方式</button>
+      <button type="button" data-tab="brand">品牌与页脚</button>
+    </nav>
+
+    <main class="admin-main">
+      <section class="admin-panel is-active" data-panel="hero"></section>
+      <section class="admin-panel" data-panel="about"></section>
+      <section class="admin-panel" data-panel="works"></section>
+      <section class="admin-panel" data-panel="articles"></section>
+      <section class="admin-panel" data-panel="contact"></section>
+      <section class="admin-panel" data-panel="brand"></section>
+    </main>
+  </div>
+</div>
+
+<script src="assets/js/content.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
